@@ -4,7 +4,7 @@ import { PokeResponse } from './interfaces/poke-response.interface';
 
 @Injectable()
 export class SeedService {
-  private readonly axios: AxiosInstance = axios;
+  private readonly axios: AxiosInstance = axios; // This is generating a dependency in our service
 
   async populateDB() {
     console.log('populateDB()');
@@ -13,8 +13,9 @@ export class SeedService {
     );
     data.results.forEach(({ name, url }) => {
       const segments = url.split('/');
+      console.log(segments);
       const no = +segments[segments.length - 2];
-      console.log({ name, no });
+      // console.log({ name, no });
     });
     return data.results;
   }
