@@ -25,6 +25,15 @@ npm i -g @nestjs/cli
 npm run docker:up
 ```
 
+5. Database seed
+
+```
+http://localhost:3000/api/v2/seed
+```
+
+
+
+
 ## Stack implemented for this proyect
 
 - MongoDB
