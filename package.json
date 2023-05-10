@@ -21,10 +21,11 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "docker:rm": "docker compose rm db -s -f -v",
     "docker:up": "docker compose up db -d",
-    "docker:restart": "npm run db:rm && npm run db:up"
+    "docker:restart": "npm run docker:rm && npm run docker:up"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mapped-types": "^1.2.2",
     "@nestjs/mongoose": "^9.2.2",
