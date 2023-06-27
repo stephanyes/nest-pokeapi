@@ -7,6 +7,7 @@ services:
       - 27017:27017
     environment:
       MONGODB_DATABASE: nest-pokemon
+    container_name: ${DB_NAME}
     volumes:
       - ./mongo:/data/db
     networks:

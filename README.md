@@ -25,16 +25,29 @@ npm i -g @nestjs/cli
 npm run docker:up
 ```
 
-5. Database seed
+5. Clone **.env.example** to **.env**
+
+6. Fill those env variables.
+
+7. Run app with
+
+```
+npm run start:dev
+```
+
+8. Database seed
 
 ```
 http://localhost:3000/api/v2/seed
 ```
 
-
-
-
 ## Stack implemented for this proyect
 
 - MongoDB
 - Nest
+
+# Production Build
+
+1. Create `.env.prod`
+2. Add all variables needed for prod environment
+3. Create new image running `npm run docker:build`
