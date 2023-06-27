@@ -21,7 +21,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "docker:rm": "docker compose rm db -s -f -v",
     "docker:up": "docker compose up db -d",
-    "docker:restart": "npm run docker:rm && npm run docker:up"
+    "docker:restart": "npm run docker:rm && npm run docker:up",
+    "docker:build": "docker-compose -f docker-compose.prod.yml --env-file .env.prod up --build",
+    "docker:run": "docker-compose -f docker-compose.prod.yml --env-file .env.prod up -d"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
